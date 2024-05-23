@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  margin: 1rem;
+  
+  background-color: #34dffd3f;
+  font-synthesis: none;
+  
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.line-height-global {
+  line-height: 2;
+}
+
+.weather-forecast-badge {
+  
+  @apply bg-sky-300 p-4 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-xl hover:scale-110 transition-all flex flex-col justify-center items-center;
+}
+
+
