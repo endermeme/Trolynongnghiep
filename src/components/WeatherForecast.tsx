@@ -12,7 +12,7 @@ export default function WeatherForecast() {
   
   return (
     <div className="flex lg:flex-row flex-col p-2">
-      <div className="flex items-center rounded-xl justify-center px-12 gap-16 lg:gap-24 bg-white mr-4">
+      <div className="flex items-center rounded-xl justify-center px-12 gap-16 lg:gap-24 bg-white mr-4 shadow-lg">
         <div className="flex flex-col justify-start">
           <IconBox>
             <FaLocationDot size={16} /> Thái Bình
