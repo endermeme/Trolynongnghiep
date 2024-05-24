@@ -32,7 +32,7 @@ export default function WeatherForecast() {
           <h1>{weatherDescriptions[getWeatherInfo?.current.weather].name}</h1>
         </div>
       </div>
-      <div className="flex flex-row flex-wrap justify-center gap-2">
+      <div className="flex flex-row flex-nowrap justify-center gap-2">
         <WeatherForecastBadge temp={getWeatherInfo?.forecast[0].temperature} status={getWeatherInfo?.forecast[0].weather} date={getWeatherInfo?.forecast[0].date}/>
         <WeatherForecastBadge temp={getWeatherInfo?.forecast[1].temperature} status={getWeatherInfo?.forecast[1].weather} date={getWeatherInfo?.forecast[1].date}/>
         <WeatherForecastBadge temp={getWeatherInfo?.forecast[2].temperature} status={getWeatherInfo?.forecast[2].weather} date={getWeatherInfo?.forecast[2].date}/>

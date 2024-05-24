@@ -46,5 +46,3 @@ export async function fetchWeather() {
     }
     return weather_status
 }
-
-fetchWeather()
