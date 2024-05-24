@@ -11,8 +11,8 @@ export default function WeatherForecast() {
   const svg_size = 100;
   
   return (
-    <div className="flex lg:flex-row flex-col p-2">
-      <div className="flex items-center rounded-xl justify-center px-12 gap-16 lg:gap-24 bg-white mr-4 shadow-lg">
+    <div className="flex lg:flex-row flex-col p-2 bg-white rounded-xl shadow-slate-300 shadow-md">
+      <div className="flex items-center rounded-xl justify-center gap-8 lg:gap-24 grow">
         <div className="flex flex-col justify-start">
           <IconBox>
             <FaLocationDot size={16} /> Thái Bình
@@ -32,11 +32,11 @@ export default function WeatherForecast() {
           <h1>{weatherDescriptions[getWeatherInfo?.current.weather].name}</h1>
         </div>
       </div>
-      <div className="flex flex-row flex-wrap justify-center gap-4">
-        <WeatherForecastBadge temp={getWeatherInfo?.forecast[0].temperature} status={getWeatherInfo?.forecast[0].weather}/>
-        <WeatherForecastBadge temp={getWeatherInfo?.forecast[1].temperature} status={getWeatherInfo?.forecast[1].weather}/>
-        <WeatherForecastBadge temp={getWeatherInfo?.forecast[2].temperature} status={getWeatherInfo?.forecast[2].weather}/>
-        <WeatherForecastBadge temp={getWeatherInfo?.forecast[3].temperature} status={getWeatherInfo?.forecast[3].weather}/>
+      <div className="flex flex-row flex-wrap justify-center gap-2">
+        <WeatherForecastBadge temp={getWeatherInfo?.forecast[0].temperature} status={getWeatherInfo?.forecast[0].weather} date={getWeatherInfo?.forecast[0].date}/>
+        <WeatherForecastBadge temp={getWeatherInfo?.forecast[1].temperature} status={getWeatherInfo?.forecast[1].weather} date={getWeatherInfo?.forecast[1].date}/>
+        <WeatherForecastBadge temp={getWeatherInfo?.forecast[2].temperature} status={getWeatherInfo?.forecast[2].weather} date={getWeatherInfo?.forecast[2].date}/>
+        <WeatherForecastBadge temp={getWeatherInfo?.forecast[3].temperature} status={getWeatherInfo?.forecast[3].weather} date={getWeatherInfo?.forecast[3].date}/>
       </div>
     </div>
   );

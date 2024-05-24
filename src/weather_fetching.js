@@ -26,7 +26,7 @@ export async function fetchWeather() {
         for (let i = 0; i < forecastWeatherData.list.length; i += 8) {
             const forecast = forecastWeatherData.list[i];
             forecastWeather.push({
-                date: new Date(forecast.dt * 1000).toLocaleDateString(),
+                date: new Date(forecast.dt * 1000).toLocaleDateString("vi-vn"),
                 weather: forecast.weather[0].description,
                 temperature: forecast.main.temp * 1,
                 humidity: forecast.main.humidity,

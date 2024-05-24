@@ -16,15 +16,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @apply text-sm lg:text-base
+
 }
 
 .line-height-global {
   line-height: 2;
 }
-
-.weather-forecast-badge {
-  
-  @apply bg-sky-300 p-4 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-xl hover:scale-110 transition-all flex flex-col justify-center items-center;
-}
-
-

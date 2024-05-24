@@ -6,18 +6,19 @@ import { weatherDescriptions } from "../utils/weatherDescriptions";
 interface WeatherInfo {
   status: string;
   temp?: number;
+  date?: string
 }
 
 
 export default function WeatherForecastBadge(props: WeatherInfo) {
   return (
-    <div className="weather-forecast-badge">
+    <div className="bg-sky-300 py-2 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-center items-center w-32 lg:w-36">
+      <h3>{props.date}</h3>
       <img src={weatherDescriptions[props.status].svg_src} width={64} height={64}/>
-      <h1>{weatherDescriptions[props.status].name}</h1>
+      <h1 className="text-nowrap overflow-hidden">{weatherDescriptions[props.status].name}</h1>
       <IconBox>
         <FaTemperatureHalf size={16} /> {props.temp && Math.floor(props.temp)} °C
       </IconBox>
-      <h3></h3>
     </div>
   );
 }
