@@ -5,7 +5,6 @@ const units = 'metric';
 const urlCurrentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
 const urlForecastWeather = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&cnt=40&appid=${apiKey}`;
 
-
 export async function fetchWeather() {
     let weather_status;
     try {

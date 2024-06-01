@@ -2,7 +2,7 @@ import { FaLocationDot, FaTemperatureHalf } from "react-icons/fa6";
 import { WiHumidity, WiStrongWind } from "react-icons/wi";
 import IconBox from "../utils/IconBox";
 import WeatherForecastBadge from "./WeatherForecastBadge";
-import * as wt from "../weather_fetching"
+import * as wt from "../utils/weather_fetching"
 import { weatherDescriptions } from "../utils/weatherDescriptions";
 
 const getWeatherInfo = await wt.fetchWeather()
@@ -11,8 +11,8 @@ export default function WeatherForecast() {
   const svg_size = 100;
   
   return (
-    <div className="flex lg:flex-row flex-col p-2 bg-white rounded-xl shadow-slate-300 shadow-md">
-      <div className="flex items-center rounded-xl justify-center gap-8 lg:gap-24 grow">
+    <div className="flex lg:flex-row flex-col p-2 bg-white rounded-xl grow shadow-slate-300 shadow-md">
+      <div className="flex items-center rounded-xl justify-center gap-8 grow lg:gap-24 mx-8">
         <div className="flex flex-col justify-start">
           <IconBox>
             <FaLocationDot size={16} /> Thái Bình
@@ -41,3 +41,4 @@ export default function WeatherForecast() {
     </div>
   );
 }
+
