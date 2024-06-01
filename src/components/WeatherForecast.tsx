@@ -33,10 +33,10 @@ export default function WeatherForecast() {
         </div>
       </div>
       <div className="flex flex-row flex-nowrap justify-center gap-2">
-        <WeatherForecastBadge temp={getWeatherInfo?.forecast[0].temperature} status={getWeatherInfo?.forecast[0].weather} date={getWeatherInfo?.forecast[0].date}/>
-        <WeatherForecastBadge temp={getWeatherInfo?.forecast[1].temperature} status={getWeatherInfo?.forecast[1].weather} date={getWeatherInfo?.forecast[1].date}/>
-        <WeatherForecastBadge temp={getWeatherInfo?.forecast[2].temperature} status={getWeatherInfo?.forecast[2].weather} date={getWeatherInfo?.forecast[2].date}/>
-        <WeatherForecastBadge temp={getWeatherInfo?.forecast[3].temperature} status={getWeatherInfo?.forecast[3].weather} date={getWeatherInfo?.forecast[3].date}/>
+        <WeatherForecastBadge temp={getWeatherInfo!.forecast[0].temperature} status={getWeatherInfo!.forecast[0].weather} date={getWeatherInfo?.forecast[0].date}/>
+        <WeatherForecastBadge temp={getWeatherInfo!.forecast[1].temperature} status={getWeatherInfo!.forecast[1].weather} date={getWeatherInfo?.forecast[1].date}/>
+        <WeatherForecastBadge temp={getWeatherInfo!.forecast[2].temperature} status={getWeatherInfo!.forecast[2].weather} date={getWeatherInfo?.forecast[2].date}/>
+        <WeatherForecastBadge temp={getWeatherInfo!.forecast[3].temperature} status={getWeatherInfo!.forecast[3].weather} date={getWeatherInfo?.forecast[3].date}/>
       </div>
     </div>
   );
